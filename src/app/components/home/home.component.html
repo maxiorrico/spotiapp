@@ -1,7 +1,7 @@
 
 <div class="card-columns">
     <div class="card" *ngFor="let item of albumes">
-      <img [src]="item.images[0].url" class="card-img-top" alt="...">
+      <img [src]="item.images | noimage" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title"> {{ item.name }} </h5>
         <span class="badge badge-pill badge-primary" *ngFor="let artista of item.artists">{{ artista.name }}</span>
